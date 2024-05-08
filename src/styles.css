@@ -1,0 +1,14 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.todo {
+  height: auto;
+  width: 400px;
+  justify-content: center;
+  background-color: aqua;
+  text-decoration: none;
+  text-align: left;
+  margin-left: 20%;
+}
