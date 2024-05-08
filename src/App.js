@@ -11,6 +11,9 @@ export default function App() {
   const handleSubmit = () => {
     if (txt === "") {
       setAlert("pls write something...");
+      setTimeout(() => {
+        setAlert("");
+      }, 5000);
     } else {
       if (edit) {
         const res = data.map((item, index) => {
