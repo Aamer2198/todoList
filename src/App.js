@@ -53,13 +53,15 @@ export default function App() {
       <div style={{ color: "red" }}>{alert}</div>
 
       <div className="todo">
-        {data.map((item, index) => (
-          <>
-            <li className="list">{item}</li>
-            <button onClick={() => handleDelete(index)}>Delete</button>
-            <button onClick={() => handleEdit(item, index)}>Edit</button>
-          </>
-        ))}
+        <ol>
+          {data.map((item, index) => (
+            <>
+              <li className="list">{item}</li>
+              <button onClick={() => handleDelete(index)}>Delete</button>
+              <button onClick={() => handleEdit(item, index)}>Edit</button>
+            </>
+          ))}
+        </ol>
       </div>
     </div>
   );
