@@ -6,10 +6,11 @@ export default function App() {
   const [data, setData] = useState([]);
   const [edit, setEdit] = useState(false);
   const [id, setId] = useState(null);
+  const [alert, setAlert] = useState("");
 
   const handleSubmit = () => {
     if (txt === "") {
-      alert("pls write something...");
+      setAlert("pls write something...");
     } else {
       if (edit) {
         const res = data.map((item, index) => {
@@ -49,6 +50,7 @@ export default function App() {
         value={txt}
       />
       <button onClick={handleSubmit}>Submit</button>
+      <div style={{ color: "red" }}>{alert}</div>
 
       <div className="todo">
         {data.map((item, index) => (
