@@ -8,21 +8,25 @@ export default function App() {
   const [id, setId] = useState(null);
 
   const handleSubmit = () => {
-    if (edit) {
-      const res = data.map((item, index) => {
-        if (index == id) {
-          return txt;
-        } else {
-          return item;
-        }
-      });
-      setData(res);
-      setTxt("");
-      setEdit(false);
-      setId(null);
+    if (txt === "") {
+      alert("pls write something...");
     } else {
-      setData([...data, txt]);
-      setTxt("");
+      if (edit) {
+        const res = data.map((item, index) => {
+          if (index == id) {
+            return txt;
+          } else {
+            return item;
+          }
+        });
+        setData(res);
+        setTxt("");
+        setEdit(false);
+        setId(null);
+      } else {
+        setData([...data, txt]);
+        setTxt("");
+      }
     }
   };
 
